@@ -1,0 +1,29 @@
+{% extends 'main.html'%}
+
+
+{% block title%} list page {% endblock title %}
+
+{% block content %}
+<div class="container"><br><br>
+<h3>welcome to detail page </h3>
+
+<a  class="btn btn-danger float-end" href="/home">back</a>
+<ul>
+
+
+<img class="img-thumbnail" style="height:300px;width:400px;"  src="{{post.image.url}}"/>
+<li style="list-style:none">{{post.description}}</li>
+<li style="list-style:none">{{post.detail}}</li>
+
+</ul>
+{% if request.user %}
+<p> the user name {{instance.user}}</p>
+
+{%else%}
+<h5>you are not the writer</h5>
+{%endif %}
+
+<a class="btn btn-success" href="{% url 'edit' post.pk %}">edit</a>
+<a  class="btn btn-danger" href="{% url 'delete' post.id%}">delete</a>
+
+{% endblock content %}

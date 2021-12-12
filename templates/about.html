@@ -1,0 +1,94 @@
+{% extends 'main.html'%}
+
+{% block title %} about {% endblock title%}
+
+
+    {% block content %}
+  
+    <div class="t">
+ <h3 class="text-light">Welcome to my website :)</h3>
+ <!-- <img src="/media/images/ford.jpg" alt="image"/> -->
+ <h2 class="text-light">This page about me and my website</h2>
+
+
+
+</div>
+<div class="container">
+
+    <p>this is sometext here </p>
+    <p>Django is a high-level Python web framework that encourages rapid development 
+        and clean, pragmatic design. Built by experienced developers, it takes care 
+        of much of the hassle of web development, so you can focus on writing your 
+        app without needing to reinvent the wheel. It's free and open source.
+
+    </p>
+    <p>Django is a high-level Python web framework that encourages rapid development 
+        and clean, pragmatic design. Built by experienced developers, it takes care 
+        of much of the hassle of web development, so you can focus on writing your 
+        app without needing to reinvent the wheel. It's free and open source.
+
+    </p>
+    <p>
+
+        Django is a fully featured Python web framework that can be used to build complex web applications. In this tutorial, you’ll jump in and learn Django by example. You’ll follow the steps to create a fully functioning web application and, along the way, learn some of the most important features of the framework and how they work together.
+
+        In later posts in this series, you’ll see how to build more complex websites using even more of Django’s features than you’ll cover in this tutorial.
+        
+        By the end of this tutorial, you will be able to:
+        
+        Understand what Django is and why it’s a great web framework
+        Understand the architecture of a Django site and how it compares with other frameworks
+        Set up a new Django project and app
+        Build a Personal Portfolio Website with Django
+
+    </p>
+    <h4>Why You Should Learn Django
+    </h4>
+    <p>he second reason you should learn Django is the scope of its features. If you need to build a website, you don’t need to rely on any external libraries or packages if you choose Django. This means that you don’t need to learn how to use anything else, and the syntax is seamless as you’re using only one framework.
+
+        There’s also the added benefit that you don’t need to worry that updating one library or framework will render others that you’ve installed useless.
+        
+        If you do find yourself needing to add extra features, there are a range of external libraries that you can use to enhance your site.
+        
+        One of the great things about the Django framework is its in-depth documentation. It has detailed documentation on every aspect of Django and also has great examples and even a tutorial to get you started.
+        
+        There’s also a fantastic community of Django developers, so if you get stuck there’s almost always a way forward by either checking the docs or asking the community.
+        
+        Django is a high-level web application framework with loads of features. It’s great for anyone new to web development due to its fantastic documentation, and particularly if you’re also familiar with Python.
+    </p>
+    <p>The Structure of a Django Website
+        A Django website consists of a single project that is split into separate apps. The idea is that each app handles a self-contained function that the site needs to perform. As an example, imagine an application like Instagram. There are several different functions that need to be performed:
+        
+        User management: Login, logout, register, and so on
+        The image feed: Uploading, editing, and displaying images
+        Private messaging: Private messages between users and notifications
+        These are each separate pieces of functionality, so if this were a Django site, then each piece of functionality should be a different Django app inside a single Django project.
+        
+        The Django project holds some configurations that apply to the project as a whole, such as project settings, URLs, shared templates and static files. Each application can have its own database and has its own functions to control how the data is displayed to the user in HTML templates.
+        
+        Each application also has its own URLs as well as its own HTML templates and static files, such as JavaScript and CSS.
+        
+        Django apps are structured so that there is a separation of logic. It supports the Model-View-Controller Pattern, which is the architecture on which most web frameworks are built. The basic principle is that in each application there are three separate files that handle the three main pieces of logic separately:
+        
+        Model defines the data structure. This is usually a database and is the base layer to an application.
+        View displays some or all of the data to the user with HTML and CSS.
+        Controller handles how the database and the view interact.
+        If you want to learn more about the MVC pattern, then check out Model-View-Controller (MVC) Explained – With Legos.
+        
+        In Django, the architecture is slightly different. Although based upon the MVC pattern, Django handles the controller part itself. There’s no need to define how the database and views interact. It’s all done for you!
+        
+        The pattern Django utilizes is called the Model-View-Template (MVT) pattern. The view and template in the MVT pattern make up the view in the MVC pattern. All you need to do is add some URL configurations to map the views to, and Django handles the rest!
+        
+        A Django site starts off as a project and is built up with a number of applications that each handle separate functionality. Each app follows the Model-View-Template pattern. Now that you’re familiar with the structure of a Django site, let’s have a look at what you’re going to build!
+        
+        What You’re Going to Build
+        Before you get started with any web development project, it’s a good idea to come up with a plan of what you’re going to build. In this tutorial, we are going to build an application with the following features:
+        
+        A fully functioning blog: If you’re looking to demonstrate your coding ability, a blog is a great way to do that. In this application, you will be able to create, update, and delete blog posts. Posts will have categories that can be used to sort them. Finally, users will be able to leave comments on posts.
+        
+        A portfolio of your work: You can showcase previous web development projects here. You’ll build a gallery style page with clickable links to projects that you’ve completed.</p>
+</div>
+{% endblock content %}
+
+</body>
+</html>

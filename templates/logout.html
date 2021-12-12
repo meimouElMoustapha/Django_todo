@@ -1,0 +1,27 @@
+{% extends 'main.html'%}
+
+
+{% block title%} list page {% endblock title %}
+
+
+{% block content %}
+
+<div class="container">
+<br>
+<h4>logout page </h4>
+<br>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    
+    <div class="alert alert-success" role="alert">
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+
+</ul>
+
+{% endif %}
+
+    <a class="btn btn-success" href="/login">login again</a> 
+</div>  
+{% endblock content %}

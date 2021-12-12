@@ -1,0 +1,33 @@
+{% extends 'main.html'%}
+
+{% block title %} delete {% endblock title%}
+
+
+    {% block content %}
+    <div class="container">
+        <br><br>
+ 
+
+ 
+    
+
+
+ 
+
+ <form method="post">
+    {% csrf_token %}
+    
+    <fieldset class="form-group">
+       <legend class="border-bottom mb-4"><h3>delete page</h3></legend>
+        <h3> are you sure you want to delete the post {{post.description}}</h3>
+    
+    </fieldset><br><br>
+    <div class="form-group">
+    <button type="submit" class="btn btn-outline-danger">yes,Delete</button>
+    <a class="btn btn-outline-secondary" href="{% url 'detail' post.pk%}">Cancel</a>
+</div>
+    </form>
+</div>
+{% endblock content %}
+</body>
+</html>

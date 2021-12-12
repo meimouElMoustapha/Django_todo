@@ -1,0 +1,49 @@
+{% extends 'main.html'%}
+
+
+
+
+{% block title%} list page {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <br><br>
+    <div class="thumbnail">
+        <h3>welcome to home page </h3>
+        <a  class="btn btn-success float-end" href="{% url 'create'%}">Create post</a>
+        <div  class="row col-4 g-3">
+        <form method="GET" action=".">
+        <input type="text" class="form-control m-3" name="q" placeholder="search"/>
+        <input type="submit" class="btn btn-success" value="Search">
+        </form>
+        </div>
+<br>
+     {% for post in post %} 
+    <div class="row">
+        <div class="col-md-4">
+    <div class="card text-center" style="width: 18rem;">
+        <img src="{{post.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <p class="card-text">{{post.description}}.</p>
+          <p class="card-text">Author : {{request.user}}.</p>
+          <li style="list-style:none"><a href="{{post.get_absolute_url}}" class="btn btn-primary">view</a></li>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+{% empty %}
+<h3>no post yet</h3>
+
+{%endfor %}
+
+
+</div>
+</div>
+
+{% endblock content %}
+
